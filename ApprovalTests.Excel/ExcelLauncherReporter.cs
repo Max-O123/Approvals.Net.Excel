@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
 using ApprovalTests.Core;
 using ApprovalTests.Reporters;
 using ApprovalUtilities.Utilities;
@@ -9,12 +10,15 @@ namespace ApprovalTests.Excel
     {
         public void Report(string approved, string received)
         {
-            GenericDiffReporter.LaunchAsync(new LaunchArgs("excel", "/r \"{0}\"".FormatWith(approved)));
+            var args = $"/r \"{approved}\" \"{received}\"";
+            Process.Start("excel.exe", args);
         }
 
         public bool IsWorkingInThisEnvironment(string forFile)
         {
-            return File.Exists(GenericDiffReporter.GetActualProgramFile("excel")) && GenericDiffReporter.IsFileOneOf(forFile, new[]{".xlsx",".xls"});
+            var excelFile = Path.GetExtension(forFile)?.ToLowerInvariant() is ".xlsx" or ".xls";
+            var excelPath = "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE";
+            return excelFile && File.Exists(excelPath);
         }
     }
 }
