@@ -24,7 +24,8 @@ namespace ApprovalTests.Excel
 
         public virtual bool Approve()
         {
-            string basename = Path.Combine(this.namer.SourcePath, this.namer.Name);
+            
+            string basename = Path.Combine(this.namer.SourcePath, this.namer.Name); //"C:\\Users\\wolvey\\Desktop\\Code\\Approvals.Net.Excel\\ApprovalTests.Excel.Tests" this.namer.SourcePath
             this.approved = Path.GetFullPath(this.writer.GetApprovalFilename(basename));
             this.received = Path.GetFullPath(this.writer.GetReceivedFilename(basename));
             this.received = this.writer.WriteReceivedFile(this.received);
