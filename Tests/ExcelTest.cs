@@ -1,12 +1,14 @@
 ﻿using System;
 using System.IO;
 using System.Net.Http;
+using ApprovalTests;
+using ApprovalTests.Excel;
 using ApprovalTests.Reporters;
 using ApprovalUtilities.SimpleLogger;
 using ApprovalUtilities.SimpleLogger.Writers;
 using ApprovalUtilities.Utilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace ApprovalTests.Excel.Tests
+namespace Tests
 
 {
     [TestClass]
