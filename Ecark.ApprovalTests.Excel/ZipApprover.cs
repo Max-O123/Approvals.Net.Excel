@@ -4,7 +4,7 @@ using ApprovalTests.Core.Exceptions;
 using ApprovalUtilities.SimpleLogger;
 using Ionic.Zip;
 
-namespace ApprovalTests.Excel
+namespace Ecark.ApprovalTests.Excel
 {
     public class ZipApprover : IApprovalApprover
     {

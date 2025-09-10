@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{7E270146-6839-4D73-B93D-F9A5180BA502}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalTests.Excel", "ApprovalTests.Excel\ApprovalTests.Excel.csproj", "{F0A73047-9ADE-4B93-B753-6190C406FF2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecark.ApprovalTests.Excel", "Ecark.ApprovalTests.Excel\Ecark.ApprovalTests.Excel.csproj", "{F0A73047-9ADE-4B93-B753-6190C406FF2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

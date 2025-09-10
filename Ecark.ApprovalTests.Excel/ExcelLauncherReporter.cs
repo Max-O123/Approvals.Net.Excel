@@ -4,7 +4,7 @@ using ApprovalTests.Core;
 using ApprovalTests.Reporters;
 using ApprovalUtilities.Utilities;
 using Microsoft.Win32;
-namespace ApprovalTests.Excel
+namespace Ecark.ApprovalTests.Excel
 {
     public class ExcelLauncherReporter : IEnvironmentAwareReporter
     {

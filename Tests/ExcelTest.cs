@@ -2,7 +2,7 @@
 using System.IO;
 using System.Net.Http;
 using ApprovalTests;
-using ApprovalTests.Excel;
+using Ecark.ApprovalTests.Excel;
 using ApprovalTests.Reporters;
 using ApprovalUtilities.SimpleLogger;
 using ApprovalUtilities.SimpleLogger.Writers;

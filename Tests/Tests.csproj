@@ -13,7 +13,7 @@
   </ItemGroup>
     
   <ItemGroup>
-    <ProjectReference Include="..\ApprovalTests.Excel\ApprovalTests.Excel.csproj" />
+    <ProjectReference Include="..\Ecark.ApprovalTests.Excel\Ecark.ApprovalTests.Excel.csproj" />
   </ItemGroup>
     
 </Project>

@@ -1,7 +1,8 @@
-﻿using ApprovalTests.Core;
+﻿using ApprovalTests;
+using ApprovalTests.Core;
 using ApprovalTests.Writers;
 
-namespace ApprovalTests.Excel
+namespace Ecark.ApprovalTests.Excel
 {
     public class ExcelApprovals
     {
