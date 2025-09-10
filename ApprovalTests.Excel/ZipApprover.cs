@@ -14,21 +14,33 @@ namespace ApprovalTests.Excel
         private string approved;
         private string received;
         private ApprovalException failure;
+        private string path;
 
-        public ZipApprover(IApprovalWriter writer, IApprovalNamer namer, bool deleteOnSuccess)
+        public ZipApprover(IApprovalWriter writer, IApprovalNamer namer, bool deleteOnSuccess, string path = null)
         {
             this.writer = writer;
             this.namer = namer;
             this.deleteOnSuccess = deleteOnSuccess;
+            this.path =  path;
         }
 
         public virtual bool Approve()
         {
-            
-            string basename = Path.Combine(this.namer.SourcePath, this.namer.Name);
-            this.approved = Path.GetFullPath(this.writer.GetApprovalFilename(basename));
-            this.received = Path.GetFullPath(this.writer.GetReceivedFilename(basename));
-            this.received = this.writer.WriteReceivedFile(this.received);
+            if (this.path == null)
+            {
+                string basename = Path.Combine(this.namer.SourcePath, this.namer.Name);
+                this.approved = Path.GetFullPath(this.writer.GetApprovalFilename(basename));
+                this.received = Path.GetFullPath(this.writer.GetReceivedFilename(basename));
+                this.received = this.writer.WriteReceivedFile(this.received);
+            }
+            else
+            {
+                string basename = Path.Combine(this.path, this.namer.Name);
+                this.approved = Path.GetFullPath(this.writer.GetApprovalFilename(basename));
+                this.received = Path.GetFullPath(this.writer.GetReceivedFilename(basename));
+                this.received = this.writer.WriteReceivedFile(this.received);
+            }
+           
 
             this.failure = this.Approve(this.approved, this.received);
             return this.failure == null;

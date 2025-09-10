@@ -27,10 +27,16 @@ namespace Tests
         public void TestBytes()
         {
             Logger.Writer = new ConsoleWriter();
-            var namer = Approvals.GetDefaultNamer();
             byte[] bytes = File.ReadAllBytes(PathUtilities.GetAdjacentFile("sample.xlsx"));
             
             ExcelApprovals.VerifyXlsx(bytes);
+        }
+        [TestMethod]
+        public void TestBytesFromPath()
+        {
+            Logger.Writer = new ConsoleWriter();
+            byte[] bytes = File.ReadAllBytes("C:\\Users\\wolvey\\Downloads\\fileTest.xlsx");
+            ExcelApprovals.VerifyXlsx(bytes, pathToUse: "C:\\Users\\wolvey\\Downloads\\");
         }
     }
 }

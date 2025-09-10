@@ -11,9 +11,9 @@ namespace ApprovalTests.Excel
             Approver.Verify(zipApprover, Approvals.GetReporter());
         }
 
-        public static void VerifyXlsx(byte[] xlsxBytes)
+        public static void VerifyXlsx(byte[] xlsxBytes, string pathToUse = null)
         {
-            var zipApprover = new ZipApprover(new ApprovalBinaryWriter(xlsxBytes, "xlsx"), Approvals.GetDefaultNamer(), true);
+            var zipApprover = new ZipApprover(new ApprovalBinaryWriter(xlsxBytes, "xlsx"), Approvals.GetDefaultNamer(), true, path: pathToUse);
             Approver.Verify(zipApprover, Approvals.GetReporter());
         }
     }
