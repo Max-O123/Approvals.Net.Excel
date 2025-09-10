@@ -3,6 +3,8 @@
     <TargetFramework>net6.0</TargetFramework>
       <DebugType>full</DebugType>
       <DebugSymbols>true</DebugSymbols>
+      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+      <Version>1.0.1</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ApprovalTests" Version="7.0.0" />
