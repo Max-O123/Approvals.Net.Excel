@@ -14,7 +14,7 @@ namespace ApprovalTests.Excel
         private string approved;
         private string received;
         private ApprovalException failure;
-        private string path;
+        private string path; //optional feild to use if storing test files outside of the directory containing the library
 
         public ZipApprover(IApprovalWriter writer, IApprovalNamer namer, bool deleteOnSuccess, string path = null)
         {
