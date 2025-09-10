@@ -35,8 +35,8 @@ namespace Tests
         public void TestBytesFromPath()
         {
             Logger.Writer = new ConsoleWriter();
-            byte[] bytes = File.ReadAllBytes("C:\\Users\\wolvey\\Downloads\\fileTest.xlsx");
-            ExcelApprovals.VerifyXlsx(bytes, pathToUse: "C:\\Users\\wolvey\\Downloads\\");
+            byte[] bytes = File.ReadAllBytes("path you want to read the file from");
+            ExcelApprovals.VerifyXlsx(bytes, pathToUse: "path to the approved file");
         }
     }
 }
